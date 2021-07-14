@@ -72,7 +72,7 @@ for (v in 201:nrow(whole)) {
       }
     }  
   }
-  print(c("Sluèuji mandáty:",v , whole$name[best_fit[1]], whole$name[best_fit[2]]))
+  print(c("Merging successive mandates:",v , whole$name[best_fit[1]], whole$name[best_fit[2]]))
   whole[best_fit[1],which(is.na(whole[best_fit[1],]))]<-whole[best_fit[2],which(is.na(whole[best_fit[1],]))]
   whole$name[best_fit[1]]<-paste(whole$name[best_fit[1]], whole$name[best_fit[2]], sep = "/")
 }
